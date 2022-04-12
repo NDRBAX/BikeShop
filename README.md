@@ -50,11 +50,11 @@ E-commerce website for the sale of bicycles.
 
 :heavy_check_mark: responsive user interface\
 :heavy_check_mark: manage a product catalog\
-:heavy_check_mark: setting up a shopping cart:                      
+:heavy_check_mark: setting up a shopping cart:\                      
 - add products
 - modify the quantity
 - delete a product
-- calculate a total amount of the cart.
+- calculate a total amount of the cart
 - integrate a payment method with Stripe
 ## :rocket: Technologies ##
 
