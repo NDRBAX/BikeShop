@@ -44,7 +44,7 @@
 
 ## :dart: About ##
 
-Describe your project
+E-commerce website for the sale of bicycles.
 
 ## :sparkles: Features ##
 
@@ -88,8 +88,8 @@ $ npm start
 
 ## :memo: Credits ##
 
-Project logo : <a href="https://www.flaticon.com/free-icons/bike" title="bike icons">Bike icons created by Freepik - Flaticon</a>
-
+Project logo : <a href="https://www.flaticon.com/free-icons/bike" title="bike icons">Bike icons created by Freepik - Flaticon</a>\
+Project realized during the <a href="https://www.lacapsule.academy/">La Capsule Academy</a> bootcamp\
 Made with :heart: by <a href="https://github.com/NDRBAX" target="_blank">NDRBAX</a>
 
 &#xa0;
