@@ -3,13 +3,13 @@ var router = express.Router();
 const stripe = require('stripe')('sk_test_51KnUwYAHcK9anL8BRTWeSXkhmCKKhVfB1aUcZuUnIweeiJFids38BlGjwH85SfFBo0LLSpwiz3I3bymQbxL4NarP00K4K8Dly7');
 
 var dataBike = [
-    { name: "BIK045", url: "/images/bike-1.jpg", price: 679 },
-    { name: "ZOOK07", url: "/images/bike-2.jpg", price: 999 },
-    { name: "TITANS", url: "/images/bike-3.jpg", price: 799 },
-    { name: "CEWO", url: "/images/bike-4.jpg", price: 1300 },
-    { name: "AMIG039", url: "/images/bike-5.jpg", price: 479 },
-    { name: "LIK099", url: "/images/bike-6.jpg", price: 869 },
-]
+    { name: "BIK045", url: "/images/bike-1.jpg", price: 679, mea: true },
+    { name: "ZOOK07", url: "/images/bike-2.jpg", price: 999, mea: false },
+    { name: "TITANS", url: "/images/bike-3.jpg", price: 799, mea: true },
+    { name: "CEWO", url: "/images/bike-4.jpg", price: 1300, mea: false },
+    { name: "AMIG039", url: "/images/bike-5.jpg", price: 479, mea: true },
+    { name: "LIK099", url: "/images/bike-6.jpg", price: 869, mea: false },
+];
 
 // CALCUL DES FRAIS DE PORT
 
@@ -35,15 +35,21 @@ var calculTotalCmd = (dataCardBike) => {
     return { montantFraisPort, totalCmd };
 }
 
-
-/* 
-? ******* GET home page ******* */
+// Fonction qui récupère les 3 produits à mettre en avant
+var getMeaList = (dataBike) => {
+        dataBike.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+        dataBike = dataBike.filter(a => a.mea === true);
+        dataBike = dataBike.slice(0, 3);
+        return dataBike;
+    }
+    /* 
+    ? ******* GET home page ******* */
 
 router.get('/', function(req, res, next) {
     if (req.session.dataCardBike == undefined) {
         req.session.dataCardBike = [];
     }
-    res.render('index', { dataBike: dataBike });
+    res.render('index', { dataBike: dataBike, mea: getMeaList(dataBike) });
 });
 /* 
 ? ******* SHOP PAGE ******* */
