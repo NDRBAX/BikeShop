@@ -37,7 +37,7 @@
         </div>
 
         <div class="row">
-            <% for(var i=0;i < dataBike.length; i++){ %>
+            <% for(var i=0;i<dataBike.length; i++){ %>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="card">
                         <img src="<%=dataBike[i].url%>" class="card-img-top">
@@ -46,7 +46,7 @@
                                 <%=dataBike[i].name%>
                             </h5>
                             <%=dataBike[i].price%>€
-                                <a href="/shop?bikeNameFromFront=<%=dataBike[i].name%>&bikePriceFromFront=<%=dataBike[i].price%>&bikeImageFromFront=<%=dataBike[i].url%>" class="btn btn-outline-info btn-sm">Buy</a>
+                                <a href="/add-shop?bikeNameFromFront=<%=dataBike[i].name%>&bikePriceFromFront=<%=dataBike[i].price%>&bikeImageFromFront=<%=dataBike[i].url%>" class="btn btn-outline-info btn-sm">Buy</a>
                         </div>
                     </div>
                 </div>

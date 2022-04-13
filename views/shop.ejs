@@ -57,13 +57,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <% 
-                            var totalCmd = 0;
-                            for(var i=0; i< dataCardBike.length; i++){
-                            %>
+                            <%for(var i=0; i<dataCardBike.length; i++){%>
                                 <tr class="basket-item">
                                     <th scope="row">
-                                        <%=i%>
+                                        <%=i+1%>
                                     </th>
                                     <td><img src=<%=dataCardBike[i].url%> class="basket-img"></td>
                                     <td>
@@ -82,11 +79,24 @@
                                         <%=dataCardBike[i].price * dataCardBike[i].quantity%>€</td>
                                     <td><a href="/delete-shop?position=<%=i%>"><button class="btn btn-outline-info btn-sm" name="button"><i class="far fa-trash-alt"></i></button></a></td>
                                 </tr>
-                                <%
-                                totalCmd += dataCardBike[i].price * dataCardBike[i].quantity;
-                                // or totalCmd = dataCardBike[i].price * dataCardBike[i].quantity + totalCmd;
-                            }%>
+                                <% }
+                                var libelle=montantFraisPort + "€";
+                                if(montantFraisPort===0) {
+                                    libelle="frais de port offert"
+                                }%>
 
+
+                                    <tr>
+                                        <th scope="row"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="total-box">Frais de port : </td>
+                                        <td>
+                                            <%= libelle %>
+                                        </td>
+                                        <td></td>
+                                    </tr>
 
                                     <tr>
                                         <th scope="row"></th>
@@ -95,12 +105,14 @@
                                         <td></td>
                                         <td class="total-box">Total Basket : </td>
                                         <td>
-                                            <%= totalCmd %>€</td>
+                                            <%= montantCommande %>€
+                                        </td>
                                         <td></td>
                                     </tr>
                         </tbody>
                     </table>
                 </div>
+
                 <div class="row">
                     <div class="col-12 text-right">
                         <form action="/create-checkout-session" method="POST">
@@ -108,12 +120,7 @@
                         </form>
                     </div>
                 </div>
-
-
                 <%}%>
-
-
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
