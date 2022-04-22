@@ -12,6 +12,7 @@
     "express": "~4.16.1",
     "express-session": "^1.17.2",
     "http-errors": "~1.6.3",
+    "mongoose": "^6.3.1",
     "morgan": "~1.9.1",
     "readme-md-generator": "^1.0.0",
     "stripe": "^8.216.0"

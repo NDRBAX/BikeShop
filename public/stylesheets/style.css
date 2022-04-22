@@ -1,10 +1,9 @@
 /* ------ Body ---- */
 
-body {
+body{
     background-color: #ffffff;
     font-family: 'Darker Grotesque', sans-serif;
-}
-
+} 
 
 /* ---------- Home page -------------- */
 
@@ -13,34 +12,35 @@ body {
     background-size: cover;
     background-position: center;
     height: 150px;
+  }
+
+
+.navbar{
+    padding:0px ;
+    color: #FFFFFF;
+    
 }
 
-.navbar {
-    padding: 0px;
+.navbar:hover{
     color: #FFFFFF;
 }
 
-.navbar:hover {
-    color: #FFFFFF;
+.navbar:link{
+    text-decoration:none;
 }
-
-.navbar:link {
-    text-decoration: none;
-}
-
-.logo {
+.logo{
     margin-left: 10px;
 }
 
 
 /* ----- Shop page ---------- */
 
-.header-shop {
+.header-shop{
     height: 40px;
     padding-left: 20px;
 }
 
-.icon-basket {
+.icon-basket{
     margin-right: 5px;
 }
 
@@ -58,6 +58,7 @@ body {
 
 .total-box {
     font-weight: bold;
+
 }
 
 .btn-checkout {
@@ -68,3 +69,6 @@ body {
     font-size: italic;
     color: crimson;
 }
+
+
+
