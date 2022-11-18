@@ -1,12 +1,9 @@
 <div align="center" id="top"> 
   <img src="./assets/bicycle.png" alt="Bikeshop"/ height="100px">
-
-  &#xa0;
-
-  <!-- <a href="https://bikeshop.netlify.app">Demo</a> -->
+  <h1>Bikeshop</h1>
 </div>
 
-<h1 align="center">Bikeshop</h1>
+
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/NDRBAX/bikeshop?color=56BEB8">
